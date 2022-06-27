@@ -1,7 +1,3 @@
 #!/bin/bash
-sort | uniq -u
-nebyu
-nebyu
-programming
-africa
+cat list | sort |uniq -u
 
