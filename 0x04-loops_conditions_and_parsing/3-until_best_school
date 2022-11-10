@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# Displays 'Holberton School 10 times using until
-string_a='Holberton School'
-counter=10
-until [ $counter -lt 1 ]; do echo "$string_a"; (( counter-=1 )); done
+# prints "Best School" ten times using until
+
+number=0
+until [ $number -eq 10 ]
+do
+   echo "Best School"
+   number=$(( number + 1 ))
+done
