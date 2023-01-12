@@ -1,9 +1,10 @@
-# Puppet manifest to install nginx
+
+# Install Nginx with puppet
 package { 'nginx':
   ensure => installed,
 }
 
-file_line { 'aaaaa':
+file_line { 'install':
   ensure => 'present',
   path   => '/etc/nginx/sites-available/default',
   after  => 'listen 80 default_server;',
