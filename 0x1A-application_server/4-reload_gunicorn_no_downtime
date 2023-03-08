@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Gracefully reloads Gunicorn
-systemctl status gunicorn | grep -oE 'Main PID: [0-9]+' | cut -d ' ' -f3 | xargs kill -HUP
+# Reload gunicorn worker processes gracefully, with no downtime
+
+kill -HUP `ps -C gunicorn fch -o pid | head -n 1`
